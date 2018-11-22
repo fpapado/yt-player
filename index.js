@@ -70,6 +70,7 @@ class YouTubePlayer extends EventEmitter {
     }, opts)
 
     this.videoId = null
+    this.startSeconds = null
     this.destroyed = false
 
     this._api = null
@@ -101,10 +102,11 @@ class YouTubePlayer extends EventEmitter {
     })
   }
 
-  load (videoId, autoplay = false) {
+  load (videoId, {startSeconds, autoplay = false}) {
     if (this.destroyed) return
 
     this.videoId = videoId
+    this.startSeconds = startSeconds;
     this._autoplay = autoplay
 
     // If the Iframe API is not ready yet, do nothing. Once the Iframe API is
@@ -124,9 +126,9 @@ class YouTubePlayer extends EventEmitter {
 
     // If the player instance is ready, load the given `videoId`.
     if (autoplay) {
-      this._player.loadVideoById(videoId)
+      this._player.loadVideoById(videoId, startSeconds)
     } else {
-      this._player.cueVideoById(videoId)
+      this._player.cueVideoById(videoId, startSeconds)
     }
   }
 

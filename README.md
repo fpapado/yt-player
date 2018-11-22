@@ -44,7 +44,7 @@ fancy dependencies doesn't make you a better programmer, and it's certainly not 
 const YTPlayer = require('yt-player')
 const player = new YTPlayer('#player')
 
-player.load('GKSRyLdjsPA')
+player.load('GKSRyLdjsPA' /*, {startSeconds: 1234, autoplay: true} */)
 player.setVolume(100)
 
 player.on('playing', () => {
@@ -130,13 +130,16 @@ and
 [`playerVars` parameters](https://developers.google.com/youtube/player_parameters#Parameters)
 for additional documentation about these parameters.
 
-### `player.load(videoId, [autoplay])`
+### `player.load(videoId, [{startSeconds, autoplay}])`
 
 This function loads the specified `videoId`. An example of a `videoId` is
 `'GKSRyLdjsPA'`.
 
+Optionally, specify a `startSeconds` parameter to indicate whether the video should begin from a specific time when `player.play()` (or autoplay) is called. Default is `undefined`, i.e. it will start from the beginning.
+You could do this with `player.seek()`, but this option is preferable because it goes straight through the Youtube iframe API.
+
 Optionally, specify an `autoplay` parameter to indicate whether the video should
-begin playing immediately, or wait for a call to `player.play()`. Default is
+begin playing immediately, o wait for a call to `player.play()`. Default is
 `false`.
 
 This should be the first function called on a new `Player` instance.
