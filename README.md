@@ -1,20 +1,16 @@
-# yt-player [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+# @fpapado/yt-player [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
-[travis-image]: https://img.shields.io/travis/feross/yt-player/master.svg
-[travis-url]: https://travis-ci.org/feross/yt-player
-[npm-image]: https://img.shields.io/npm/v/yt-player.svg
-[npm-url]: https://npmjs.org/package/yt-player
-[downloads-image]: https://img.shields.io/npm/dm/yt-player.svg
-[downloads-url]: https://npmjs.org/package/yt-player
-[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
-[standard-url]: https://standardjs.com
+[npm-image]: https://img.shields.io/npm/v/@fpapado/yt-player.svg
+[npm-url]: https://npmjs.org/package/@fpapado/yt-player
+[downloads-image]: https://img.shields.io/npm/dm/@fpapado/yt-player.svg
+[downloads-url]: https://npmjs.org/package/@fpapado/yt-player
 
-### Simple, robust, blazing-fast YouTube Player API
+> Simple, robust, blazing-fast YouTube Player API
 
 ## Install
 
 ```
-npm install yt-player
+npm install @fpapado/yt-player
 ```
 
 ## Why this package?
@@ -297,6 +293,10 @@ values are: 'small', 'medium', 'large', 'hd720', 'hd1080', 'highres'.
 
 This event fires whenever the video playback rate changes.
 
+## Credits
+
+Forked off [yt-player](https://github.com/feross/yt-player) by [Feross Aboukhadijeh](https://feross.org).
+
 ## License
 
-MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org).
+MIT. Copyright (c) Fotis Papadogeorgopoulos.
