@@ -98,7 +98,7 @@ class YouTubePlayer extends EventEmitter {
 
       // If load(videoId, [autoplay]) was called before Iframe API loaded, ensure it gets
       // called again now
-      if (this.videoId) this.load(this.videoId, {startSeconds: this.startSeconds, autoplay: this._autoplay})
+      if (this.videoId) this.load(this.videoId, { startSeconds: this.startSeconds, autoplay: this._autoplay })
     })
   }
 
@@ -417,7 +417,7 @@ class YouTubePlayer extends EventEmitter {
     //   3. `load(videoId, [autoplay])` was called multiple times before the player
     //      was ready. Therefore, the player was initialized with the wrong videoId,
     //      so load the latest videoId and potentially autoplay it.
-    this.load(this.videoId, {startSeconds: this.startSeconds, autoplay: this._autoplay})
+    this.load(this.videoId, { startSeconds: this.startSeconds, autoplay: this._autoplay })
 
     this._flushQueue()
   }
