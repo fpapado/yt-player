@@ -1,7 +1,7 @@
 {
   "name": "@fpapado/yt-player",
   "description": "Simple, robust YouTube Iframe Player API",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "author": {
     "name": "Fotis Papadogeorgopoulos",
     "email": "fotis@fpapado.com",
