@@ -102,11 +102,11 @@ class YouTubePlayer extends EventEmitter {
     })
   }
 
-  load (videoId, {startSeconds, autoplay = false}) {
+  load (videoId, { startSeconds, autoplay = false }) {
     if (this.destroyed) return
 
     this.videoId = videoId
-    this.startSeconds = startSeconds;
+    this.startSeconds = startSeconds
     this._autoplay = autoplay
 
     // If the Iframe API is not ready yet, do nothing. Once the Iframe API is
